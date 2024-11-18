@@ -26,6 +26,11 @@ function drawStar( mx = width/2, my = height/2, ir = 50, or = 100, numberOfSides
   let theta = 0
   let dt = TWO_PI/numberOfPoints
 
+  //breathing task
+  let time = millis()/1000 
+  let ir = baseIR + 10 * sin(time)
+  let or = baseOR + 15 * sin(time)
+
   beginShape()
   for( let i = 0; i < numberOfPoints; i++ ) {
     if( i % 2 === 0 ) {
